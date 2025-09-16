@@ -1,7 +1,7 @@
-import PhotoAndSalary from "./components/PhotoAndSalary.jsx";
-import Contacts from "./components/Contacts.jsx";
-import SkillsSet from "./components/SkillsSet.jsx";
-import Languages from "./components/Languages.jsx";
+import PhotoAndSalary from "./PhotoAndSalary.jsx";
+import Contacts from "./Contacts.jsx";
+import SkillsSet from "./SkillsSet.jsx";
+import Languages from "./Languages.jsx";
 
 export default function LeftPanel() {
     return (

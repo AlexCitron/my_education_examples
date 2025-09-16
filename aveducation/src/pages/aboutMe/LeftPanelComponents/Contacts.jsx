@@ -2,7 +2,7 @@ export default function Contacts() {
     return (
         <>
             <p className='border-1 py-2 mt-5 text-2xl font-semibold text-center'>Контакты:</p>
-            <div className='flex gap-3 px-1 mt-3 justify-center '>
+            <div className='flex gap-3 px-1 mt-3'>
                 <a href="tel:+79897751609" className='flex gap-3 cursor-pointer hover:text-amber-600 transition duration-200'>
                     <svg
                         className="h-6 w-6 fill-current"
@@ -41,7 +41,7 @@ export default function Contacts() {
                     </svg>
                 </a>
             </div>
-            <div className='flex gap-3 px-1 mt-3 justify-center'>
+            <div className='flex gap-3 px-1 mt-3'>
                 <a className='flex gap-3 cursor-pointer hover:text-blue-600 transition duration-200'
                    href="mailto:avostr@mail.ru">
                     <svg

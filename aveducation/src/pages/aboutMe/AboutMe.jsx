@@ -1,5 +1,5 @@
-import LeftPanel from "./Leftpanel.jsx";
-import MainPart from "./MainPart.jsx";
+import LeftPanel from "./LeftPanelComponents/Leftpanel.jsx";
+import MainPart from "./MainPartComponents/MainPart.jsx";
 
 export default function AboutMe() {
     return (
