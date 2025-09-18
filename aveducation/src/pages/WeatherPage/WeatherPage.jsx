@@ -43,7 +43,7 @@ export default function WeatherPage() {
                 const query = city.trim() ? city : `${coords.latitude},${coords.longitude}`;
 
                 const response = await fetch(
-                    `http://api.weatherapi.com/v1/current.json?key=${KEY}&q=${query}`
+                    `https://api.weatherapi.com/v1/current.json?key=${KEY}&q=${query}`
                 );
                 const data = await response.json();
                 if(data.error){
