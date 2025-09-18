@@ -1,7 +1,7 @@
 import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
 import Layout from "./components/Layout.jsx";
 import AboutMe from "./pages/aboutMe/AboutMe.jsx";
-// import WeatherPage from "./pages/WeatherPage/WeatherPage.jsx";
+import WeatherPage from "./pages/WeatherPage/WeatherPage.jsx";
 import CurrencyExchange from "./pages/CurrencyExchange/CurrencyExchange.jsx";
 import TaskList from "./pages/TaskList/TaskList.jsx";
 import HomePage from "./pages/HomePage.jsx";
@@ -23,9 +23,8 @@ const router = createBrowserRouter([
             children: [
                 {index: true, element: <HomePage />},
                 {path: 'aboutMe', element: <AboutMe />},
-                // {path: 'weather', element: <WeatherPage />},
+                {path: 'weather', element: <WeatherPage />},
                 {path: 'currencyExchange', element: <CurrencyExchange />},
-                {path: 'taskList', element: <TaskList />},
                 {path: 'taskList', element: <TaskList />},
                 {path: 'eStore', element: <E_Store_Layout/>, children: [
                         {

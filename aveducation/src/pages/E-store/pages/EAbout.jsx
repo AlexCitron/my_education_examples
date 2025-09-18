@@ -44,18 +44,18 @@ export default function EAbout() {
 
             {/* Кодовые блоки */}
             <h3>Example Code Block</h3>
-            <pre>
-        <code>
-          {`function Shop() {
-  return (
-    <div>
-      <h1>Welcome to the Shop</h1>
-      <p>Find your favorite products here.</p>
-    </div>
-  );
-}`}
-        </code>
-      </pre>
+                <pre>
+                    <code>
+                      {`function Shop() {
+              return (
+                <div>
+                  <h1>Welcome to the Shop</h1>
+                  <p>Find your favorite products here.</p>
+                </div>
+              );
+            }`}
+                    </code>
+                </pre>
 
             {/* Ссылки */}
             <h3>Learn More</h3>

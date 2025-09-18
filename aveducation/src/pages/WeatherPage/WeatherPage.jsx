@@ -3,7 +3,7 @@ import Main from "./components/Main.jsx";
 import WeatherCard from "./components/weatherCardContainer.jsx";
 import {useEffect, useState} from "react";
 
-// const KEY = '74bb4c61b35747e691f113026251408'
+const KEY = '1'
 
 export default function WeatherPage() {
     const [city, setCity] = useState("");
