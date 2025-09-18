@@ -1,19 +1,15 @@
-import {NavLink} from "react-router-dom";
+import NavMenuLink from "../UI/NavMenuLink.jsx";
 
-export default function Header() {
+export function Header() {
+
     return (
-        <div className={'header-container'}>
-            <header className="header">
-                <nav>
-                    <ul>
-                        <NavLink to={'/eStore'}><li>Home</li></NavLink>
-                        <NavLink to={'/eStore/about'}><li>About</li></NavLink>
-                        <NavLink to={'/eStore/search'}><li>Search</li></NavLink>
-                        <NavLink to={'/eStore/login'}><li>Login</li></NavLink>
-                    </ul>
-                </nav>
-            </header>
-            <hr/>
-        </div>
-    )
+        <header className='flex py-8 px-8 justify-between header bg-blue-200 shadow-md max-w-2xl m-auto rounded-md'>
+            <img className="h-6" src={"/logo.svg"} alt={'logo'}/>
+            <ul className='flex gap-14'>
+                <li><NavMenuLink to={'/eStore'}>Home</NavMenuLink></li>
+                <li><NavMenuLink to={'/eStore/about'}>About</NavMenuLink></li>
+                <li><NavMenuLink to={'/eStore/cart'}>Cart</NavMenuLink></li>
+            </ul>
+        </header>
+)
 }

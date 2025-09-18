@@ -112,3 +112,5 @@ export const products = [
         img: "/skateboard.png",
     },
 ];
+
+export default {categories, products}
