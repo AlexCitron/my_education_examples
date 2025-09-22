@@ -2,7 +2,7 @@ import {NavLink} from "react-router-dom";
 
 export default function  Header() {
     return (
-        <header className="bg-gray-100 shadow-xl flex gap-5 py-5 px-5">
+        <header className="bg-gray-100 shadow-xl flex gap-5 py-5 px-5 rounded-md">
             <NavLink to="/">Home</NavLink>
             <NavLink to="/aboutMe">AboutMe</NavLink>
             <NavLink to="/weather">Weather</NavLink>

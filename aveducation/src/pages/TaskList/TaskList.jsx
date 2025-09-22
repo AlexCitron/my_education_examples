@@ -4,6 +4,7 @@ import {useState, useEffect} from "react";
 import { initialTasks } from "./misc/data.js";
 
 
+
 export default function TaskList() {
     const [time, setTime] = useState(new Date());
     const [tasks, setTasks] = useState([...initialTasks]);
@@ -25,7 +26,7 @@ export default function TaskList() {
 
 
   return (
-    <div className='app'>
+    <div className='flex flex-col mx-20 mt-5'>
         <h1>Timer: {time.toLocaleTimeString()}</h1>
         <FormsContainer className='task-add-container' setTasks={setTasks} tasks={tasks} openSection={openSection} setOpenSection={setOpenSection} />
         <FormsContainer className='task-container'

@@ -11,34 +11,35 @@ export default function FormsContainer(props) {
     switch (className) {
         case "task-add-container":
             return (
-                <div className='task-container'>
-                    <h1>Add Task to list</h1>
+                <div className='relative bg-white flex flex-col task-form mb-5 animate-fade-in shadow-md rounded-md py-5'>
+                    <h2 className="text-gray-700 font-semibold text-3xl pl-10">Add Task to list</h2>
                     <ButtonCloseOpenForm
-                        className={`close-button${openSection.addTasksForm ? ' open' : ''}` }
+                        isOpen={openSection.addTasksForm}
                         onClick={() => handleToggleSection('addTasksForm', setOpenSection)} />
                     {openSection.addTasksForm && <AddTaskForm tasks={tasks} setTasks={setTasks}/>}
                 </div>
             )
         case "task-container":
             return(
-                <div className='task-container'>
-                    <h2>Tasks</h2>
+                <div className='relative bg-white flex flex-col task-form mb-5 animate-fade-in shadow-md rounded-md py-5'>
+                    <h2 className="text-gray-700 font-semibold text-3xl pl-10">Tasks</h2>
                     <ButtonCloseOpenForm
-                        className={`close-button${openSection.tasksForm ? ' open' : ''}` }
+                        isOpen={openSection.tasksForm}
                         onClick={() => handleToggleSection('tasksForm', setOpenSection)}/>
-                    <div className="sort-controls">
-                        <button className={`sort-button ${sortType === 'date' ? "active" : ""}`} onClick={() => handleSortButtonClick("date", sortType, sortOrder, setTasks, setSortType, setSortOrder, tasks)}>By date {sortType === 'date' && sortOrder === 'asc' ? "\u2191" : "\u2193"}</button>
-                        <button className={`sort-button ${sortType === 'priority' ? "active" : ""}`} onClick={() => handleSortButtonClick('priority', sortType, sortOrder, setTasks, setSortType, setSortOrder, tasks)}>By Priority {sortType === 'priority' && sortOrder === 'asc' ? "\u2191" : "\u2193"}</button>
-                    </div>
+                    {/*<div className="flex justify-start items-center gap-12 mb-5">*/}
+                    {/*    <button className={`sort-button ${sortType === 'date' ? "active" : ""}`} onClick={() => handleSortButtonClick("date", sortType, sortOrder, setTasks, setSortType, setSortOrder, tasks)}>By date {sortType === 'date' && sortOrder === 'asc' ? "\u2191" : "\u2193"}</button>*/}
+                    {/*    <button className={`sort-button ${sortType === 'priority' ? "active" : ""}`} onClick={() => handleSortButtonClick('priority', sortType, sortOrder, setTasks, setSortType, setSortOrder, tasks)}>By Priority {sortType === 'priority' && sortOrder === 'asc' ? "\u2191" : "\u2193"}</button>*/}
+                    {/*</div>*/}
                     {openSection.tasksForm && <TaskList time={time} tasks={tasks} setTasks={setTasks}/>}
                 </div>
             )
         case "completed-task-container":
             return(
-                <div className='completed-task-container'>
-                    <h2>Completed Tasks </h2>
+                <div className='relative bg-white flex flex-col task-form mb-5 animate-fade-in shadow-md rounded-md py-5'>
+
+                    <h2 className="text-gray-700 font-semibold text-3xl pl-10">Completed Tasks </h2>
                     <ButtonCloseOpenForm
-                        className={`close-button${openSection.completedTasksForm ? ' open' : ''}` }
+                        isOpen={openSection.completedTasksForm}
                         onClick={() => handleToggleSection('completedTasksForm', setOpenSection)} />
                     {openSection.completedTasksForm && <TaskList time={time} tasks={tasks} setTasks={setTasks}/> }
                 </div>
