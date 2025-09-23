@@ -61,40 +61,42 @@ export default function App() {
     }
 
     return (
-        <div className="bg-white px-5 py-10">
-            <h1 className="mb-10 text-xl font-bold text-shadow-lg text-center">Currency exchange calculator</h1>
-            <div className='flex flex-col gap-3.5'>
-                {error && renderError()}
-                <div className='flex flex-col justify-center items-center'>
-                    <input
-                        type="text"
-                        className='p-2.5 text-md w-20 border-gray-300 border-1 rounded-md text-center'
-                        placeholder={'Amount'}
-                        onChange={(e) => {
-                            setError(null)
-                            setAmount(e.target.value)
-                        }}
-                    />
-                    <select className='p-2.5 mt-2.5 text-md border-1 border-gray-300 rounded-md'
+        <div className='h-screen'>
+            <div className="bg-white rounded-xl pt-5 px-5 pb-5 mt-5">
+                <h1 className="mb-10 text-xl font-bold text-shadow-lg text-center">Currency exchange calculator</h1>
+                <div className='flex flex-col gap-3.5'>
+                    {error && renderError()}
+                    <div className='flex flex-col justify-center items-center'>
+                        <input
+                            type="text"
+                            className='p-2.5 text-md w-20 border-gray-300 border-1 rounded-md text-center'
+                            placeholder={'Amount'}
                             onChange={(e) => {
-                        setResult(null)
-                        setFromCurrency(e.target.value)}} value={fromCurrency}>
-                        {currencies.map(name => <option key={name} value={name}>{name}</option>)}
-                    </select>
-                    <span className="text-3xl py-2 rotate-90">
-                        ➡</span>
-                    <select className='p-2.5 text-md border-1 border-gray-300 rounded-md'
-                            onChange={(e) => {
-                        setResult(null)
-                        setToCurrency(e.target.value)}} value={toCurrency}>
-                        {currencies.map(name => <option key={name} value={name}>{name}</option>)}
-                    </select>
+                                setError(null)
+                                setAmount(e.target.value)
+                            }}
+                        />
+                        <select className='p-2.5 mt-2.5 text-md border-1 border-gray-300 rounded-md'
+                                onChange={(e) => {
+                            setResult(null)
+                            setFromCurrency(e.target.value)}} value={fromCurrency}>
+                            {currencies.map(name => <option key={name} value={name}>{name}</option>)}
+                        </select>
+                        <span className="text-3xl py-2 rotate-90">
+                            ➡</span>
+                        <select className='p-2.5 text-md border-1 border-gray-300 rounded-md'
+                                onChange={(e) => {
+                            setResult(null)
+                            setToCurrency(e.target.value)}} value={toCurrency}>
+                            {currencies.map(name => <option key={name} value={name}>{name}</option>)}
+                        </select>
+                    </div>
+                    <button className='px-2.5 py-5 text-md rounded-md bg-blue-500 text-white cursor-pointer transition duration-300
+                    hover:bg-blue-600'
+                            onClick={() => getResult()}>Convert</button>
+                    {loading && renderLoading()}
+                    {!error && !loading && result && renderResult()}
                 </div>
-                <button className='px-2.5 py-5 text-md rounded-md bg-blue-500 text-white cursor-pointer transition duration-300
-                hover:bg-blue-600'
-                        onClick={() => getResult()}>Convert</button>
-                {loading && renderLoading()}
-                {!error && !loading && result && renderResult()}
             </div>
         </div>
     )
