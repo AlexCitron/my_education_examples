@@ -94,7 +94,7 @@ export default function WeatherPage() {
 
     return (
     <div className='flex flex-col items-center h-screen justify-center
-    bg-gradient-to-b from-black from-[-50%] to-[#003288]  bg-no-repeat'>
+    bg-gradient-to-b from-black from-[-50%] to-[#003288]  bg-no-repeat w-screen'>
         <p className='text-2xl text-yellow-50'>Weather forecast from
             <a className='hover:cursor-pointer text-yellow-200' href='https://www.weatherapi.com/'> https://www.weatherapi.com/</a> please use your API Key to get forecast</p>
         <Main>
